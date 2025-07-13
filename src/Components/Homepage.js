@@ -25,7 +25,7 @@ return (
         <button className='mt-10 px-6 py-2 bg-[#00df9a] text-black font-bold rounded-lg hover:bg-[#00df9a]/80 transition duration-300 w-30 h-auto flex items-center justify-center'>
         <a href="/Gadon_Christian_Resume.pdf" download className="flex items-center">
             Download CV
-            <IoMdDownload className='w-5 h-5'/>
+            <IoMdDownload className='w-5 h-5 ml-2'/>
         </a>
         </button>
     </div>
