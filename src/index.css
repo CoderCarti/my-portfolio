@@ -5,3 +5,7 @@
 body{
     background-color: rgb(10, 10, 10);
 }
+
+html {
+  scroll-behavior: smooth;
+}
