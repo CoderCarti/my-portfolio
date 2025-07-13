@@ -9,7 +9,7 @@ return (
         <img
             src={gadonski}
             alt="Gadonski"
-            className='w-44 h-44 mt-10 rounded-full object-cover shadow-md'
+            className='w-44 h-44 mt-10 rounded-full object-cover shadow-lg shadow-green-400/40'
             />
         <h1 className='text-white mt-10 text-4xl font-bold'>Christian Gadon</h1>
         <ReactTyped

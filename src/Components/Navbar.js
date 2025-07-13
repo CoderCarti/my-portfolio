@@ -8,11 +8,9 @@ const Navbar = () => {
         setNav(!nav);
     }
 
-
-
   return (
     <div className='flex justify-between text-white items-center p-5 bg-[#0a0a0a]'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'> Portfolio</h1>
+      <h1 className='w-full text-[20px] font-bold text-[#00df9a] cursor-pointer'> Christian's Portfolio</h1>
       <ul className='hidden md:flex justify-between items-center'>
         <li className='p-4 mr-10 whitespace-nowrap hover:text-[#00df9a] cursor-pointer font-bold'>Home</li>
         <li className='p-4 mr-10 whitespace-nowrap hover:text-[#00df9a] cursor-pointer font-bold'>About Me</li>
