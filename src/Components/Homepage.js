@@ -29,8 +29,8 @@ return (
             backSpeed={60}
             loop   
         />
-        <p className='text-white mt-7 text-[21px] font-semibold w-[60%] text-center'>Welcome to my portfolio! I am a passionate full-stack developer with a 
-            love for clean UI and practical backend solutions.</p>
+        <p className='text-white mt-7 text-[21px] font-semibold w-[60%] text-center'>React. Node. MongoDB. Clean Code from Front to Back.
+I'm a full-stack developer passionate about creating modern, functional, and maintainable web applications.</p>
         <button className='mt-10 px-6 py-2 bg-[#00df9a] text-black font-bold rounded-lg hover:bg-[#00df9a]/80 transition duration-300 w-30 h-auto flex items-center justify-center'>
             <a href="/Gadon_Christian_Resume.pdf" download className="flex items-center">
                 Download CV
