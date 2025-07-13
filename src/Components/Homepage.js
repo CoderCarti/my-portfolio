@@ -8,6 +8,7 @@ import { FaReact } from "react-icons/fa";
 import { FaHtml5, FaVuejs } from "react-icons/fa";
 import { FaNode } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { DiMongodb } from "react-icons/di";
 
 const Homepage = () => {
 return (
@@ -68,6 +69,10 @@ return (
                 <div className='flex flex-col items-center'>
                     <IoLogoJavascript className='w-10 h-10' />
                     <span className='text-white text-sm mt-2'>JavaScript</span>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <DiMongodb className='w-10 h-10' />
+                    <span className='text-white text-sm mt-2'>MongoDB</span>
                 </div>
             </div>
         </div>
