@@ -34,48 +34,50 @@ return (
                 <IoMdDownload className='w-5 h-5 ml-2'/>
             </a>
         </button>
-        <div className='mt-10 text-[#00df9a] flex space-x-4 border-2 border-[#00df9a] p-4 rounded-lg w-[80%] justify-center items-center flex-col '>
-            <SiAlby className='w-[70px] h-[70px] ml-3' />
-            <h1 className='text-center mr-[20px] w-[20%] mb-3'>TechStack</h1>
-            <div className='flex space-x-8 mt-4 justify-between w-[75%]'>
-                <div className='flex flex-col items-center'>
-                    <FaHtml5 className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>HTML</span>
+        <div className='mt-10 text-[#00df9a] flex flex-col border-2 border-[#00df9a] p-4 rounded-lg w-[90%] max-w-screen-xl mx-auto items-center'>
+            <SiAlby className='w-[70px] h-[70px] mb-2' />
+            <h1 className='text-center text-xl font-bold mb-4'>TechStack</h1>
+
+            <div className='flex flex-wrap justify-center gap-6 w-full mt-4'>
+                <div className='flex flex-col items-center w-20'>
+                <FaHtml5 className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>HTML</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <FaReact className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>React</span>
+                <div className='flex flex-col items-center w-20'>
+                <FaReact className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>React</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <IoLogoCss3 className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>CSS</span>
+                <div className='flex flex-col items-center w-20'>
+                <IoLogoCss3 className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>CSS</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <IoLogoAngular className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>Angular</span>
+                <div className='flex flex-col items-center w-20'>
+                <IoLogoAngular className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>Angular</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <FaVuejs className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>Vue.js</span>
+                <div className='flex flex-col items-center w-20'>
+                <FaVuejs className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>Vue.js</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <FaNode className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>Node.js</span>
+                <div className='flex flex-col items-center w-20'>
+                <FaNode className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>Node.js</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <RiTailwindCssFill className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>Tailwind CSS</span>
+                <div className='flex flex-col items-center w-24'>
+                <RiTailwindCssFill className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>Tailwind</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <IoLogoJavascript className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>JavaScript</span>
+                <div className='flex flex-col items-center w-24'>
+                <IoLogoJavascript className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>JavaScript</span>
                 </div>
-                <div className='flex flex-col items-center'>
-                    <DiMongodb className='w-10 h-10' />
-                    <span className='text-white text-sm mt-2'>MongoDB</span>
+                <div className='flex flex-col items-center w-24'>
+                <DiMongodb className='w-10 h-10' />
+                <span className='text-white text-sm mt-2 text-center'>MongoDB</span>
                 </div>
             </div>
-        </div>
+            </div>
+
     </div>
 )
 }
