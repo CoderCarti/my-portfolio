@@ -91,7 +91,7 @@ I'm a full-stack developer passionate about creating modern, functional, and mai
                 <div className='mt-10 text-white text-center w-full flex flex-col items-center px-4'>
                 <h2 className='text-3xl font-bold mb-6'>Projects</h2>
                 <p className='text-center w-full md:w-[60%] mb-6'>
-                    Here are some of my recent projects. Click on the links to view them on GitHub
+                    Here are some of my recent projects. Click on the links to view them.
                 </p>
 
                 <div className='flex flex-col lg:flex-row gap-8 w-full max-w-6xl'>
