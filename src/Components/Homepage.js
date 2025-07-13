@@ -10,10 +10,12 @@ import { FaL, FaNode } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 import studevent from '../images/Studevent.png';
+import ScrollToTopButton from './ScrollToTopButton';
 
 const Homepage = () => {
 return (
     <div className='flex flex-col items-center h-screen bg-[#0a0a0a] pt-[90px]'>
+        <ScrollToTopButton />
         {/*home section*/}
          <section id="home" className='flex flex-col items-center h-screen'>
         <img
