@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from 'react-router-dom';
 import gadonski from '../images/gadonski_img.png';
 import { ReactTyped } from "react-typed";
 import { IoMdDownload, IoLogoCss3 } from "react-icons/io";
@@ -14,6 +15,8 @@ import studevent from '../images/Studevent.png';
 import ScrollToTopButton from './ScrollToTopButton';
 
 const Homepage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -51,10 +54,15 @@ const Homepage = () => {
             <IoMdDownload className='w-5 h-5 ml-2' />
           </a>
         </button>
+
+      <button onClick={() => navigate('/login')} className='mt-4 px-6 py-2 bg-[#00df9a] text-black font-bold rounded-lg hover:bg-[#00df9a]/80 transition duration-300 w-30 h-auto flex items-center justify-center'>
+        Go to Login
+      </button>
+
       </section>
 
       {/* Tech Stack Section */}
-      <div className='mt-10 text-[#00df9a] flex flex-col border-2 border-[#00df9a] p-4 rounded-lg w-[90%] max-w-screen-xl mx-auto items-center'>
+      <div className='mt-5 text-[#00df9a] flex flex-col border-2 border-[#00df9a] p-4 rounded-lg w-[90%] max-w-screen-xl mx-auto items-center'>
         <section id="projects" className='py-16 flex flex-col items-center' data-aos="fade-up">
           <SiAlby className='w-[70px] h-[70px] mb-2' />
           <h1 className='text-center text-xl font-bold mb-4'>TechStack</h1>
