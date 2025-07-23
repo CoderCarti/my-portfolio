@@ -54,11 +54,6 @@ const Homepage = () => {
             <IoMdDownload className='w-5 h-5 ml-2' />
           </a>
         </button>
-
-      <button onClick={() => navigate('/login')} className='mt-4 px-6 py-2 bg-[#00df9a] text-black font-bold rounded-lg hover:bg-[#00df9a]/80 transition duration-300 w-30 h-auto flex items-center justify-center'>
-        Go to Login
-      </button>
-
       </section>
 
       {/* Tech Stack Section */}
