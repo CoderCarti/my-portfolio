@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import gadonski from '../images/gadonski_img.png';
 import { ReactTyped } from "react-typed";
 import { IoMdDownload, IoLogoCss3 } from "react-icons/io";
@@ -12,7 +12,9 @@ import { FaL, FaNode } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 import studevent from '../images/Studevent.png';
+import elmos from '../images/elmos-bike-shop.png';
 import ScrollToTopButton from './ScrollToTopButton';
+import Modal from './Modal';
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -23,6 +25,38 @@ const Homepage = () => {
       once: true
     });
   }, []);
+
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    setIsModalOpen(false);
+  };
+
+  const projects = [
+  {
+    id: 1,
+    title: '(Capstone Project) Studevent',
+    description: 'StudEvent is a mobile and web application serves as a centralized system for the Student Development and Activities Office enabling communication between student organizations and SDAO.  This system simplifies the submission and approval process of events proposals, monitor the real-time status of submitted proposal, and maintains digital record of activities.',
+    image: studevent,
+    link: 'https://www.studevent.org/',
+  },
+  {
+    id: 2,
+    title: 'Elmos Bike Shop Website',
+    description: 'A fully responsive bike shop eCommerce site featuring gear catalogs and modern design.',
+    image: elmos,
+    link: null,
+  }
+];
+
+
 
   return (
     <div className='flex flex-col items-center bg-[#0a0a0a] pt-[90px]'>
@@ -91,34 +125,28 @@ const Homepage = () => {
         </section>
       </div>
 
-      {/* Projects Section */}
-      <div className='mt-10 text-white text-center w-full flex flex-col items-center px-4' data-aos="fade-up">
-        <h2 className='text-3xl font-bold mb-6'>Projects</h2>
-        <p className='text-center w-full md:w-[60%] mb-6'>
-          Here are some of my recent projects. Click on the links to view them.
-        </p>
-
-        <div className='flex flex-col lg:flex-row gap-8 w-full max-w-6xl'>
-          <div className='w-full lg:w-[45%] bg-gray-800 p-6 rounded-lg shadow-lg' data-aos="zoom-in">
-            <h3 className='text-xl font-semibold text-[#00df9a]'>Project 1: Portfolio Website</h3>
-            <p className='text-white mt-2'>A responsive portfolio website showcasing my skills and projects.</p>
-            <img
-              src={studevent}
-              alt="Project 1"
-              className='mt-4 w-full h-auto rounded-lg shadow-md'
-            />
-            <p className='text-white mt-4 text-justify text-sm leading-relaxed'>
-              The event approval procedure is significantly enhanced by the combination of technology.
-              "StudEvent" eliminates the need for taxing human effort and cumbersome recordkeeping...
+          {/* Projects Section */}
+          <div className='mt-10 text-white text-center w-full flex flex-col items-center px-4' data-aos="fade-up">
+            <h2 className='text-3xl font-bold mb-6'>Projects</h2>
+            <p className='text-center w-full md:w-[60%] mb-6'>
+              Here are some of my recent projects. Click on the links to view them.
             </p>
-            <button
-              onClick={() => window.open('https://www.studevent.org/', '_blank')}
-              className='mt-6 px-4 py-2 bg-[#00df9a] text-black font-bold rounded-lg hover:bg-[#00df9a]/80 transition duration-300'
-            >
-              View Project
-            </button>
-          </div>
+
+            <div className='flex flex-col lg:flex-row gap-8 w-full max-w-6xl justify-center'>
+      {projects.map((project) => (
+        <div
+          key={project.id}
+          onClick={() => openModal(project)}
+          className='w-full lg:w-[45%] bg-gray-800 p-6 rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform'
+          data-aos="zoom-in"
+        >
+          <h3 className='text-xl font-semibold text-[#00df9a]'>{project.title}</h3>
+          <img src={project.image} alt={project.title} className='mt-4 w-full h-auto rounded-lg shadow-md' />
+          <p className='text-white mt-4 text-sm leading-relaxed'>{project.description.substring(0, 100)}...</p>
         </div>
+      ))}
+    </div>
+
       </div>
 
       {/* About Me Section */}
@@ -174,6 +202,7 @@ const Homepage = () => {
       <footer className="text-center text-sm text-gray-500 py-6">
         © {new Date().getFullYear()} Christian Gadon. All rights reserved.
       </footer>
+      <Modal isOpen={isModalOpen} onClose={closeModal} project={selectedProject} />
     </div>
   );
 };
